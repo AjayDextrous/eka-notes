@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Eka Notes</string>
+    <string name="title_activity_home_screen_activity">EkaNotes \u03b1</string>
+    <string name="init_prefs_file_key">io.eka.ekanotes.INIT_PREFS</string>
+    <string name="action_settings">Settings</string>
+    <string name="global.welcome_title">Welcome to EkaNotes!</string>
+    <string name="global.welcome_help_text">This is a sample Note. you can add new notes by clicking the \'+\' button</string>
+    <string name="ui.cancel">Cancel</string>
+    <string name="ui.ok">OK</string>
+    <string name="sharedprefs.welcome_note_added">WELC_NOTE_ADDED</string>
+    <string name="global.version_code">v0.1-alpha</string>
+    <string name="ui.about">About</string>
+</resources>

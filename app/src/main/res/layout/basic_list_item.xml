@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:textSize="18sp"
+        android:textColor="@color/textPrimaryBlack"
+        tools:text="Note Title"/>
+    <TextView
+        android:id="@+id/note_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textColor="@color/textSecondaryBlack"
+        android:lines="2"
+        android:ellipsize="end"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie sed diam ut malesuada. Nunc at mauris porttitor, porta risus quis, consequat elit. Sed a neque nec purus sodales rutrum id eu mauris."/>
+
+</LinearLayout>
