@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import io.eka.ekanotes.models.BasicNote;
+import io.eka.ekanotes.models.MyObjectBox;
 import io.objectbox.Box;
 import io.objectbox.BoxStore;
 import io.objectbox.android.AndroidObjectBrowser;
@@ -16,7 +18,7 @@ import io.objectbox.android.AndroidObjectBrowser;
 
 public class EkaApplication extends Application {
 
-    public static final String TAG = "ObjectBoxExample";
+    public static final String TAG = "EkaNotesOBX";
     public static final boolean EXTERNAL_DIR = false;
 
     private BoxStore boxStore;

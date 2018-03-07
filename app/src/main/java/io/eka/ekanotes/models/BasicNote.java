@@ -1,4 +1,4 @@
-package io.eka.ekanotes;
+package io.eka.ekanotes.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,12 +7,23 @@ import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 
 /**
- * Created by ajay-5674 on 25/01/18.
+ * Created by ajay on 25/01/18.
  */
 
 @Entity
 public class BasicNote implements Parcelable {
 
+    public static final Parcelable.Creator<BasicNote> CREATOR = new Parcelable.Creator<BasicNote>() {
+        @Override
+        public BasicNote createFromParcel(Parcel source) {
+            return new BasicNote(source);
+        }
+
+        @Override
+        public BasicNote[] newArray(int size) {
+            return new BasicNote[size];
+        }
+    };
     @Id
     private long Id;
     private String title;
@@ -20,6 +31,12 @@ public class BasicNote implements Parcelable {
 
     public BasicNote() {
         this.Id = 0;
+    }
+
+    protected BasicNote(Parcel in) {
+        this.Id = in.readLong();
+        this.title = in.readString();
+        this.content = in.readString();
     }
 
     public long getId() {
@@ -57,22 +74,4 @@ public class BasicNote implements Parcelable {
         dest.writeString(this.title);
         dest.writeString(this.content);
     }
-
-    protected BasicNote(Parcel in) {
-        this.Id = in.readLong();
-        this.title = in.readString();
-        this.content = in.readString();
-    }
-
-    public static final Parcelable.Creator<BasicNote> CREATOR = new Parcelable.Creator<BasicNote>() {
-        @Override
-        public BasicNote createFromParcel(Parcel source) {
-            return new BasicNote(source);
-        }
-
-        @Override
-        public BasicNote[] newArray(int size) {
-            return new BasicNote[size];
-        }
-    };
 }

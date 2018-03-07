@@ -3,12 +3,13 @@ package io.eka.ekanotes;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import io.eka.ekanotes.models.BasicNote;
 
 /**
  * Created by ajay on 21/01/18.
@@ -16,8 +17,8 @@ import android.widget.Toast;
 
 public class NoteDialogFragment extends DialogFragment {
 
-    private Context context;
     OnNotesUpdateListener onUpdateListener;
+    private Context context;
     private BasicNote note = null;
 
     public static NoteDialogFragment newNote(Context context){
@@ -60,7 +61,7 @@ public class NoteDialogFragment extends DialogFragment {
         final EditText contentEditText = view.findViewById(R.id.note_content);
         if(note != null){
             titleEditText.setText(note.getTitle());
-            contentEditText.setText((CharSequence) note.getContent());
+            contentEditText.setText(note.getContent());
         }
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -73,8 +74,7 @@ public class NoteDialogFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 if(titleEditText.getText().toString().isEmpty()){
-                    Toast.makeText(context,"Title cannot be empty",Toast.LENGTH_SHORT);
-                    return;
+                    Toast.makeText(context, "Title cannot be empty", Toast.LENGTH_SHORT).show();
                 }else {
 
                     if(note != null){

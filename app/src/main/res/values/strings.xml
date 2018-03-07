@@ -9,6 +9,9 @@
     <string name="ui.cancel">Cancel</string>
     <string name="ui.ok">OK</string>
     <string name="sharedprefs.welcome_note_added">WELC_NOTE_ADDED</string>
-    <string name="global.version_code">v0.1-alpha</string>
+    <string name="global.version_code">v0.2-alpha</string>
     <string name="ui.about">About</string>
+    <string name="samples.lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie sed diam ut malesuada. Nunc at mauris porttitor, porta risus quis, consequat elit. Sed a neque nec purus sodales rutrum id eu mauris.</string>
+    <string name="ui.title">Title</string>
+    <string name="ui.add_note">Add Note …</string>
 </resources>

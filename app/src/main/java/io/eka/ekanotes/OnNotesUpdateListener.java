@@ -1,7 +1,9 @@
 package io.eka.ekanotes;
 
+import io.eka.ekanotes.models.BasicNote;
+
 /**
- * Created by ajay-5674 on 21/01/18.
+ * Created by ajay on 21/01/18.
  */
 
 public interface OnNotesUpdateListener {

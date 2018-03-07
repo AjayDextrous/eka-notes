@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:contentDescription="app icon"
             android:src="@mipmap/ic_launcher"
             tools:layout_editor_absoluteX="97dp"
             tools:layout_editor_absoluteY="64dp" />
@@ -60,12 +61,11 @@
         android:id="@+id/version_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_layout"
         android:layout_marginTop="16dp"
         android:text="@string/global.version_code"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_layout" />
 
 
 </android.support.constraint.ConstraintLayout>
