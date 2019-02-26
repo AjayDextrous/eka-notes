@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/ui.title"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimaryBlack"
+            android:background="@color/noteWhiteDark"
+            android:padding="5.33dp"
+            />
+        <TextView
+            android:id="@+id/note_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="6"
+            android:lines="6"
+            android:background="@color/noteWhiteLight"
+            android:textColor="@color/textSecondaryBlack"
+            android:maxWidth="150dp"
+            android:ellipsize="end"
+            android:padding="5.33dp"
+            tools:text="@string/samples.lorem_ipsum" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
